@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row wrap;
+}
+
+.nav--item {
+  padding: 0.5em 1em;
+  font-size: 1.1rem;
+  color: white;
+  background: blue;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}

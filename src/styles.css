@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica, sans-serif";
+}
+
+button {
+  padding: 0.5em 1em;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 2rem auto;
+  height: 100%;
+}
+
+.app--header {
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.display-text {
+  margin: 1rem;
+  padding: 0.5em 1.25em;
+  height: auto;
+  float: left;
+  max-width: 800px;
+  height: 100vh;
+}
+
+.customize-style div {
+  margin: 0.5rem;
+  padding: 0.5em;
+}
