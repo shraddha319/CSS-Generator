@@ -9,7 +9,7 @@ export default function App() {
     Button: false
   });
 
-  const [styleState, setStyleState] = useState({
+  const [fontStyleState, setFontStyleState] = useState({
     fontSize: 16,
     fontFamily: "Helvetica, sans-serif",
     backgroundColor: "#fff",
@@ -27,8 +27,8 @@ export default function App() {
       <Navigation navItems={navItems} setNavItems={setNavItems} />
       <Font
         displayState={navItems.Font}
-        styleState={styleState}
-        setStyleState={setStyleState}
+        styleState={fontStyleState}
+        setStyleState={setFontStyleState}
       />
     </div>
   );
