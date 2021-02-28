@@ -1,6 +1,6 @@
 import CustomizeStyle from "./CustomizeStyle.js";
 
-export default function Font({ styleState, setStyleState }) {
+export default function Font({ displayState, styleState, setStyleState }) {
   const generateStyle = (styleState) => ({
     fontSize: `${styleState.fontSize}px`,
     fontFamily: styleState.fontFamily,
@@ -14,7 +14,7 @@ export default function Font({ styleState, setStyleState }) {
   });
 
   return (
-    <div>
+    <div style={{ display: !displayState ? "none" : "initial" }}>
       <div className="display-text">
         <p className="display-text__body" style={generateStyle(styleState)}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

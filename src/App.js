@@ -25,13 +25,11 @@ export default function App() {
     <div className="App">
       <h1 className="app--header">CSS Generator</h1>
       <Navigation navItems={navItems} setNavItems={setNavItems} />
-      <div style={{ display: !navItems.Font ? "none" : "initial" }}>
-        hello - font here
-      </div>
-      <div style={{ display: !navItems.Button ? "none" : "initial" }}>
-        hello - button here
-      </div>
-      <Font styleState={styleState} setStyleState={setStyleState} />
+      <Font
+        displayState={navItems.Font}
+        styleState={styleState}
+        setStyleState={setStyleState}
+      />
     </div>
   );
 }
