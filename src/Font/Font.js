@@ -13,6 +13,10 @@ export default function Font({ displayState, styleState, setStyleState }) {
     padding: `${styleState.padding}em`
   });
 
+  function generateCode(styleState) {
+    return JSON.stringify(generateStyle(styleState));
+  }
+
   return (
     <div style={{ display: !displayState ? "none" : "initial" }}>
       <div className="display-text">
@@ -27,15 +31,15 @@ export default function Font({ displayState, styleState, setStyleState }) {
         </p>
         <div>
           <code>
-            <div style={{ display: "none" }}>
-              {Object.keys(styleState).map((property) => (
-                <p key={property}>
-                  {property} : {styleState[property]}
-                </p>
-              ))}
-            </div>
+            <div style={{ display: "none" }}>{generateCode(styleState)}</div>
+            <button
+              onClick={() => {
+                window.navigator.clipboard.writeText(generateCode(styleState));
+              }}
+            >
+              Copy &lt;/&gt;{" "}
+            </button>
           </code>
-          <button>Copy &lt;/&gt; </button>
         </div>
       </div>
       <CustomizeStyle styleState={styleState} setStyleState={setStyleState} />

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./styles.css";
+import "../styles.css";
 import {
   fontWeight,
   fontStyle,
   fontFamily,
   textAlignment
-} from "./utility/constants.js";
+} from "../utility/constants.js";
 
 export default function CustomizeStyle({ styleState, setStyleState }) {
   const increaseFontSize = () =>
